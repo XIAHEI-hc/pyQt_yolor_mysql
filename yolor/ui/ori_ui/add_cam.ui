@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addinfo</class>
+ <widget class="QWidget" name="addinfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#addinfo{
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>72</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Century Gothic&quot;;</string>
+   </property>
+   <property name="text">
+    <string>摄像头ID：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>150</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="text">
+    <string>本地文件：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>250</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>200</y>
+     <width>72</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>具体位置：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>140</y>
+     <width>61</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>浏览</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>250</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>50</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+}
+/*焦点样式*/
+QLineEdit:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>190</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+}
+/*焦点样式*/
+QLineEdit:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>140</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextBrowser{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+}
+/*悬停*/  
+QTextBrowser:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QTextBrowser:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="text">
+    <string>摄像头IP：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+}
+/*焦点样式*/
+QLineEdit:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

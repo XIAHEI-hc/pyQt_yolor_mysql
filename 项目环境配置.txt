@@ -1,0 +1,34 @@
+#用户名密码
+用户名：yang
+密码：123456
+
+
+#环境Anaconda
+
+
+#创建虚拟环境
+conda create -n yolor python=3.6
+#激活环境
+conda activate yolor
+#安装所需环境
+pip install -r requirements.txt
+
+
+#数据库配置   mysql8.0版本
+
+#创建数据库
+create database fire_smog_info;
+#将数据库文件sql文件导入数据库
+
+#修改info_mysql.py的数据库的用户名user，端口号port和密码password
+      conn = pymysql.connect(host='127.0.0.1',
+                                user='root',
+                                port=3306,
+                                db = "fire_smog_info",
+                                password='abc123',
+                                charset='utf8'
+                                )
+
+
+#开始begin
+python main_win.py

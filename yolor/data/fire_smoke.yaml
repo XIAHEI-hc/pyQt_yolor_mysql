@@ -1,0 +1,7 @@
+train: ../dataset/images/train/  # 118k images
+val: ../dataset/images/val/  # 5k images
+
+
+nc: 2
+
+names: ["smoke","fire"]

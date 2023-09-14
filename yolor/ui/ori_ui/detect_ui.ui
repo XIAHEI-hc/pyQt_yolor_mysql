@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1131</width>
+    <height>713</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#label3{
+    text-align:right;
+    font-family:'Microsoft YaHei';
+    font-size:30px;
+    font-weight:bold;
+   }
+#MainWindow{
+	background-color:white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>741</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label{
+    text-align:right;
+    font-family:;
+	font: ;
+	font: 36pt &quot;华文楷体&quot;;
+    font-size:40px;
+    font-weight:bold;
+    }</string>
+    </property>
+    <property name="text">
+     <string>烟雾火焰检测</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	border: 1px solid #bebebe;
+	padding: 1px 18px 1px 3px;
+	font: normal normal 16px &quot;华文楷体&quot;;
+	color: #555555;
+	background: transparent;
+	font-family:'Microsoft YaHei';
+	color:black;
+
+}
+ 
+ 
+QComboBox:editable{
+	background: transparent;
+}
+ 
+QComboBox:!editable, QComboBox::drop-down:editable{
+	background: transparent;
+}
+ 
+QComboBox:!editable:on, QComboBox::drop-down:editable:on{
+	background: transparent;
+}
+ 
+QComboBox:!on{
+}
+ 
+QComboBox:on{ /* the popup opens */
+	color: #555555;
+	border-color: #327cc0;
+	background: transparent;
+}
+ 
+QComboBox::drop-down{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+}
+ 
+QComboBox::down-arrow {
+	image: url(:/common/combobox_arrow);
+}
+ 
+QComboBox::down-arrow:on {
+	image: url(:/common/combobox_arrow_up);
+}
+ 
+QComboBox QAbstractItemView {
+	outline: 0; 
+	border: 1px solid #327cc0;
+	background-color: #F1F3F3;
+	font: normal normal 14px &quot;Microsoft YaHei&quot;;
+}
+ 
+QComboBox QAbstractItemView::item {
+	height: 32px;
+	color: #555555;
+	background-color: transparent;
+}
+ 
+QComboBox QAbstractItemView::item:hover {
+	color: #FFFFFF;
+	background-color: #327cc0;
+}
+ 
+QComboBox QAbstractItemView::item:selected {
+	color: #FFFFFF;
+	background-color: #327cc0;
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar:vertical {
+	background-color: #d0d2d4;
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical {
+	background: rgb(160,160,160);
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {
+	background: rgb(90, 91, 93);
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>区域A</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>1091</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	border: 1px solid #bebebe;
+	padding: 1px 18px 1px 3px;
+	font: normal normal 16px &quot;Microsoft YaHei&quot;;
+	color: #555555;
+	background: transparent;
+	font-family:'Microsoft YaHei';
+	color:black;
+	font-size: 18;
+
+}
+ 
+ 
+QComboBox:editable{
+	background: transparent;
+}
+ 
+QComboBox:!editable, QComboBox::drop-down:editable{
+	background: transparent;
+}
+ 
+QComboBox:!editable:on, QComboBox::drop-down:editable:on{
+	background: transparent;
+}
+ 
+QComboBox:!on{
+}
+ 
+QComboBox:on{ /* the popup opens */
+	color: #555555;
+	border-color: #327cc0;
+	background: transparent;
+}
+ 
+QComboBox::drop-down{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+}
+ 
+QComboBox::down-arrow {
+	image: url(:/common/combobox_arrow);
+}
+ 
+QComboBox::down-arrow:on {
+	image: url(:/common/combobox_arrow_up);
+}
+ 
+QComboBox QAbstractItemView {
+	outline: 0; 
+	border: 1px solid #327cc0;
+	background-color: #F1F3F3;
+	font: normal normal 14px &quot;Microsoft YaHei&quot;;
+}
+ 
+QComboBox QAbstractItemView::item {
+	height: 32px;
+	color: #555555;
+	background-color: transparent;
+}
+ 
+QComboBox QAbstractItemView::item:hover {
+	color: #FFFFFF;
+	background-color: #327cc0;
+}
+ 
+QComboBox QAbstractItemView::item:selected {
+	color: #FFFFFF;
+	background-color: #327cc0;
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar:vertical {
+	background-color: #d0d2d4;
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical {
+	background: rgb(160,160,160);
+}
+ 
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {
+	background: rgb(90, 91, 93);
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>120</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+	color:black;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>初始化模型</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label_2{
+	
+	font: 15pt &quot;华文楷体&quot;;
+	color:black;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>具体位置：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label_3{
+		font: 15pt &quot;华文楷体&quot;;
+	color:black;
+}</string>
+    </property>
+    <property name="text">
+     <string>检测结果：</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>20</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>300</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QTextBrowser{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+	font-size:20px;
+	border-radius:5px;
+}
+/*焦点样式*/
+
+QTextBrowser:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_4">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>350</y>
+      <width>231</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#textBrowser_4{
+	font-size: 25px;
+}
+
+QTextBrowser{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+	font-size:20px;
+	border-radius:5px;
+}
+/*焦点样式*/
+
+QTextBrowser:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:25px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>341</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#grouptBox{
+	  text-align:right;
+    
+	font: 15pt &quot;华文楷体&quot;;
+    
+    font-weight:bold;
+	color: black;
+
+}</string>
+    </property>
+    <property name="title">
+     <string>检测信息</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QTextBrowser" name="textBrowser_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QTextBrowser{
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(0, 0, 0, 0.23);
+	/*圆角5个像素*/
+	border-radius:5px;
+	font-size:12px;
+	border-radius:5px;
+}
+/*焦点样式*/
+
+QTextBrowser:focus
+{
+	border:1px solid rgb(44,169,225);
+}
+</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>170</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>图片检测</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>视频控制</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>20</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>暂停</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>结束</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>110</y>
+      <width>701</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>170</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>视频检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>170</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	/*灰色背景*/
+	background:rgba(220,221,221,1);
+	/*渐变白灰背景*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.03, y2:1, stop:0 rgba(253, 253, 253, 255), stop:1 rgba(238, 238, 238, 255));
+	border:1px solid rgba(0, 0, 0, 0.23);
+	border-radius:5px;
+font-family:'Microsoft YaHei';
+	color:black;
+}
+/*悬停*/  
+QPushButton:hover
+{
+    background-color:rgb(234,244,252);
+	border:1px solid rgb(44,169,225);
+}
+/*按下*/  
+QPushButton:pressed
+{
+	border:1px solid rgb(44,169,225);
+    background-color:rgb(235,246,247);
+    /*左内边距为2像素，让按下时字向右移动2像素*/  
+    padding-left:2px;
+    /*上内边距为2像素，让按下时字向下移动2像素*/  
+    padding-top:2px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>打开摄像头</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1131</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>添加</string>
+     </property>
+     <addaction name="action_2"/>
+    </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>设置</string>
+     </property>
+     <addaction name="action_3"/>
+    </widget>
+    <addaction name="menu_2"/>
+    <addaction name="menu_3"/>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>日志</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_2">
+   <property name="text">
+    <string>摄像头</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionmodel_1">
+   <property name="text">
+    <string>model_1</string>
+   </property>
+  </action>
+  <action name="actionmodel_2">
+   <property name="text">
+    <string>model_2</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>选择模型</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>查看</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
